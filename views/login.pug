@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title 스탬팡
+    // Bootstrap core CSS
+    link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Custom fonts for this template
+    link(href='vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic', rel='stylesheet', type='text/css')
+    // Plugin CSS
+    link(href='vendor/magnific-popup/magnific-popup.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='css/creative.min.css', rel='stylesheet')
+    
+    body
+      nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+        .container
+          a.navbar-brand.js-scroll-trigger(href='/main') StampANG
+          button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarResponsive.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+            
+          //button.btn.btn-primary(type='button') 로그아웃
+      header.masthead
+        .header-content
+          .header-content-inner
+            h2#homeHeading
+            
+            .container
+              //.col-sm-6.col-sm-offset-3
+              div(align="center")
+                h2
+                  span.fa.fa-sign-in
+                  |  로그인
+                  p
+                // 인증 처리 후 메시지가 있으면 메시지 표시
+                if ((message).length > 0)
+                  .alert.alert-danger #{message}
+                hr
+                form(action='/login', method='post')
+                  .form-group
+                    label 이메일
+                    input.form-control(type='text', name='email', style='width:60%')
+                  .form-group
+                    label 비밀번호
+                    input.form-control(type='password', name='password' style='width:60%')
+                  button.btn.btn-warning.btn-primary(type='submit') 로그인
+                hr
+                p
+                  | 계정이 없으세요? 
+                  a(href='/signup') 회원가입하기
+                  br
+                  br
+                  a(href='/main') 홈으로
+                
+          
+    script(src='vendor/jquery/jquery.min.js')
+    script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+          // Plugin JavaScript
+    script(src='vendor/jquery-easing/jquery.easing.min.js')
+    script(src='vendor/scrollreveal/scrollreveal.min.js')
+    script(src='vendor/magnific-popup/jquery.magnific-popup.min.js')
+          // Custom scripts for this template
+    script(src='js/creative.min.js')

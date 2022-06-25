@@ -1,0 +1,158 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title 스탬팡
+    // Bootstrap core CSS
+    link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Custom fonts for this template
+    link(href='vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic', rel='stylesheet', type='text/css')
+    // Plugin CSS
+    link(href='vendor/magnific-popup/magnific-popup.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='css/creative.min.css', rel='stylesheet')
+  body#page-top
+    // Navigation
+    nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+      .container
+        a.navbar-brand.js-scroll-trigger(href='#page-top') StampANG
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            //- li.nav-item
+            //-   a.nav-link.js-scroll-trigger(href='/signup') Sign Up
+            //- if (login_success)  
+            //-   li.nav-item
+            //-     a.nav-link.js-scroll-trigger(href='/logout') Logout
+            //- else
+            //-   li.nav-item
+            //-     a.nav-link.js-scroll-trigger(href='/login') Login
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#services') Services
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#contact') Contact
+        if (login_success)  
+          button.btn.btn-primary(type='button' onclick="location.href='/logout'") 로그아웃
+        else  
+          button.btn.btn-primary(type='button' onclick="location.href='/login'") 로그인
+          | &nbsp
+          button.btn.btn-primary(type='button' onclick="location.href='/signup'") 회원가입
+            
+    header.masthead
+      .header-content
+        .header-content-inner
+          h2#homeHeading
+            | 증명을 위한 모든 문서,
+            p
+            | 이제 블록체인에 등록하고 관리하세요.
+          hr
+          p
+            | StAMPANG은 인증서, 계약서 등 공적 증명이 필요한 문서 또는 각종 파일들을 안전하고 암호화된 
+            br
+            | 분산 장부 시스템인 블록체인에 등기하고 관리할 수 있게 해주는 서비스입니다.
+          if (login_success)
+            a.btn.btn-primary.btn-xl.js-scroll-trigger(href='/mypage') 스탬팡 사용해보기
+          else
+            a.btn.btn-primary.btn-xl.js-scroll-trigger(href='/login') 스탬팡 사용해보기
+
+          
+    section#services
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading At Your Service
+            hr.primary
+            p.text-muted(align='center') StampANG로 등록한 모든 문서 및 파일은 임의적인 조작이 불가능하도록 블록체인에 등기되므로 확실한 증명 효과와 보호가 보장됩니다.
+      .container
+        .row
+          .col-lg-3.col-md-6.text-center
+            .service-box
+              i.fa.fa-4x.fa-diamond.text-primary.sr-icons
+              h3 강력한 보안
+              p.text-muted 모든 문서 및 파일은 암호화되어 블록체인에 등록되므로 위변조가 불가능합니다.
+          .col-lg-3.col-md-6.text-center
+            .service-box
+              i.fa.fa-4x.fa-paper-plane.text-primary.sr-icons
+              h3 존재 증명
+              p.text-muted 스탬팡에 등록했던 원본파일을 분실하여도 원본 파일이 존재했었다는 사실을 증명할 수 있습니다.
+          .col-lg-3.col-md-6.text-center
+            .service-box
+              i.fa.fa-4x.fa-newspaper-o.text-primary.sr-icons
+              h3 무결성 증명
+              p.text-muted 블록체인에 등기한 문서 및 파일은 조작이 불가능하므로 원본 문서가 훼손되지 않았음을 증명할 수 있습니다.
+          .col-lg-3.col-md-6.text-center
+            .service-box
+              i.fa.fa-4x.fa-heart.text-primary.sr-icons
+              h3 법적 효력
+              p.text-muted 모든 문서 및 파일은 위조가 불가능하며 독립적인 제3자에 의한 검증으로 민사에서 실제적으로 법적인 효력을 가질 수 있습니다.
+
+
+              
+    section#contact
+      .container
+        .row
+          .col-lg-8.mx-auto.text-center
+            h2.section-heading Contact
+            hr.primary
+            p 449-702 경기도 용인시 모현읍 왕산리 산89 한국외국어대학교 용인캠퍼스
+        .row
+          .col-lg-4.ml-auto.text-center
+            i.fa.fa-phone.fa-3x.sr-contact
+            p 031-330-4268
+          .col-lg-4.mr-auto.text-center
+            i.fa.fa-envelope-o.fa-3x.sr-contact
+            p
+              a(href='mailto:hgkim3691@naver.com') hgkim3691@naver.com
+    // Bootstrap core JavaScript
+    script(src='vendor/jquery/jquery.min.js')
+    script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+    // Plugin JavaScript
+    script(src='vendor/jquery-easing/jquery.easing.min.js')
+    script(src='vendor/scrollreveal/scrollreveal.min.js')
+    script(src='vendor/magnific-popup/jquery.magnific-popup.min.js')
+    // Custom scripts for this template
+    script(src='js/creative.min.js')
+
+    script.
+      jQuery(function() {
+      jQuery(".player").mb_YTPlayer();
+      });
+      /*<![CDATA[*/
+      window.zEmbed || function(e, t) {
+      var n, o, d, i, s, a = [],
+      r = document.createElement("iframe");
+      window.zEmbed = function() {
+      a.push(arguments)
+      }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1],
+      d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+      try {
+      o = s
+      } catch (c) {
+      n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s
+      }
+      o.open()._l = function() {
+      var o = this.createElement("script");
+      n && (this.domain = n), o.id = "js-iframe-async", o.src = e, this.t = +new Date, this.zendeskHost = t, this.zEQueue = a, this.body.appendChild(o)
+      }, o.write('<body onload="document._l();">'), o.close()
+      }("https://assets.zendesk.com/embeddable_framework/main.js", "coinstack.zendesk.com"); /*]]>*/
+    // End of cloudwallet Zendesk Widget script
+    script.
+      (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-51357902-12', 'auto');
+      ga('send', 'pageview');
